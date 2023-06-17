@@ -18,7 +18,6 @@ const Card = ({ props }) => {
         <img src="/dots.png" alt="images" />
       </div>
       {props.images && (
-        // https://source.unsplash.com/400x300/?minimal/?sig=1
         <div className="w-full h-40 my-3">
           <img
             src={`${props.images}/?sig=${props.id}`}
@@ -31,7 +30,7 @@ const Card = ({ props }) => {
       {props.para && (
         <p className="text-[#787486] font-normal text-sm">{props.para}</p>
       )}
-      <div className="flex mt-5 justify-between items-center">
+      <div className="flex flex-col md:flex-row gap-3 md:gap-0 mt-5 md:justify-between md:items-center">
         <div className="flex items-center">
           <img
             src="https://source.unsplash.com/400x300/?profile/?sig=1"
@@ -54,7 +53,7 @@ const Card = ({ props }) => {
             className="w-6 -ml-2 border border-white aspect-square rounded-full"
           />
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 justify-between">
           <span className="flex gap-1 text-[#787486] text-xs items-center">
             <img src="/message.png" alt="" className="h-5" />
             {props.comments} Comments

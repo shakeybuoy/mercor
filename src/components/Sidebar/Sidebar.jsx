@@ -2,14 +2,14 @@
 import { useState } from "react";
 
 export default function Sidebar() {
-  const [collapse, setCollapse] = useState(false);
+  const [collapse, setCollapse] = useState(true);
   const handleCollapse = () => {
     setCollapse(!collapse);
   };
   return (
     <section
-      //   onMouseEnter={() => setCollapse(false)}
-      //   onMouseLeave={() => setCollapse(true)}
+        onMouseEnter={() => setCollapse(false)}
+        onMouseLeave={() => setCollapse(true)}
       className={`h-full relative border-r-2  ${
         collapse ? " collapsed" : " expanded"
       }`}
@@ -62,7 +62,12 @@ export default function Sidebar() {
               We don’t have any notice for you, till then you can share your
               thoughts with your peers.
             </p>
-            <button type="button" className="w-full rounded-lg bg-white p-3 mt-5 text-sm font-medium">Write a message</button>
+            <button
+              type="button"
+              className="w-full rounded-lg bg-white p-3 mt-5 text-sm font-medium"
+            >
+              Write a message
+            </button>
           </div>
         </div>
       </div>

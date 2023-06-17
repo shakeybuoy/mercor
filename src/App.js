@@ -2,14 +2,14 @@ import KanbanBoard from "./components/dnd/KanbanBoard";
 
 function App() {
   return (
-    <main className="px-10 py-5 overflow-auto h-custom">
-      <div className="my-5 flex justify-between items-center">
-        <div className="flex items-center gap-5">
+    <main className="md:px-10 grid w-full relative md:pb-10 md:pt-5 px-5 py-3 overflow-auto h-custom">
+      <div className="my-5 flex justify-between items-center pr-5">
+        <div className="flex items-center w-full gap-5">
           <h1 className="text-5xl font-semibold">Mobile App</h1>
           <ButtonImage src={"/edit.png"} alt={"edit"} />
           <ButtonImage src={"/link.png"} alt={"link"} />
         </div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 pr-5 md:pr-0">
           <button className="text-[#5030E5] font-medium">Invite</button>
           <div className="flex items-center relative">
             <ImageFlow src={"https://i.pravatar.cc/150?img=1"} />
@@ -22,7 +22,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="my-10 flex justify-between items-center">
+      <div className="w-full my-10 flex justify-between items-center">
         <div className="flex items-center gap-5">
           <ButtonImageTwo src={"/filter.png"} dropdown text={"Filter"} />
           <ButtonImageTwo src={"calendar.png"} dropdown text={"Today"} />

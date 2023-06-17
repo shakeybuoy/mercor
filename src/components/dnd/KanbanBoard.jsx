@@ -40,7 +40,7 @@ const KanbanBoard = () => {
             {(provided) => (
               <div
                 {...provided.droppableProps}
-                className="bg-[#F5F5F5] w-full p-5 rounded-2xl min-w-[400px]"
+                className="bg-[#F5F5F5] w-full p-5 rounded-2xl md:min-w-[400px] min-w-[300px]"
                 ref={provided.innerRef}
               >
                 <div className="text-base flex justify-between font-medium text-[#0D062D]">
